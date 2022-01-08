@@ -4,4 +4,4 @@
 
 ### Установка
 
-    go install github.com/3crabs/go-requests@latest
+    go get github.com/3crabs/go-requests
