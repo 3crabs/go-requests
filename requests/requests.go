@@ -1,4 +1,4 @@
-package rest
+package requests
 
 import (
 	"bytes"
