@@ -5,7 +5,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"io"
 	"io/ioutil"
 	"net/http"
 )
@@ -18,11 +17,11 @@ func PostRequest(ctx context.Context, url string, reqBody any, result any, f ...
 	return request(ctx, http.MethodPost, url, reqBody, result, f...)
 }
 
-func PutRequest(ctx context.Context, url string, reqBody io.Reader, result any, f ...func(req *http.Request)) error {
+func PutRequest(ctx context.Context, url string, reqBody any, result any, f ...func(req *http.Request)) error {
 	return request(ctx, http.MethodPut, url, reqBody, result, f...)
 }
 
-func DeleteRequest(ctx context.Context, url string, reqBody io.Reader, result any, f ...func(req *http.Request)) error {
+func DeleteRequest(ctx context.Context, url string, reqBody any, result any, f ...func(req *http.Request)) error {
 	return request(ctx, http.MethodDelete, url, reqBody, result, f...)
 }
 
